@@ -4,15 +4,27 @@ namespace TestDrivenDev
 {
     public class Player : MonoBehaviour
     {
-        private int _health = 100;
-        private int _armor = 0;
+        private readonly int _maxHealth = 100;
+        private int _health;
 
-        public int Health {
-            get { return _health + _armor; }
-            private set { }
+        public int Health
+        {
+            get
+            {
+                return _health + Armor;
+            }
+
+            private set
+            {
+                _health = value;
+
+                if (_health > _maxHealth)
+                {
+                    _health = _maxHealth;
+                }
+            }
         }
 
         public int Armor { get; private set; }
     }
 }
-

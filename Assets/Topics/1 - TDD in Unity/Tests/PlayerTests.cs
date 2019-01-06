@@ -25,7 +25,7 @@ namespace Tests
 
         // A Test behaves as an ordinary method
         [Test(Description = "Newly created player objects should always have 100 health.")]
-        public void Is_NewPlayer_Health_Equals_100()
+        public void Does_NewPlayer_Health_Equal_100()
         {
             //Act
             int playerHealth = _player.Health;
@@ -35,7 +35,6 @@ namespace Tests
             Assert.AreEqual(expectedHealth, playerHealth);
         }
 
-        // A Test behaves as an ordinary method
         [Test(Description = "Newly created player objects should always have 0 armor.")]
         public void Is_NewPlayer_Armor_Equals_0()
         {
