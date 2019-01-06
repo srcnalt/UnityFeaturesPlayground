@@ -7,6 +7,11 @@ namespace TestDrivenDev
         private readonly int _maxHealth = 100;
         private int _health;
 
+        private void Awake()
+        {
+            _health = _maxHealth;
+        }
+
         public int Health
         {
             get
